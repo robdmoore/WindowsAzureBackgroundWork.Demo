@@ -125,11 +125,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
   <Target Name="AfterBuild">
+    <CreateItem Include="$(ProjectDir)..\WindowsAzureBackgroundWork.Demo.WebJob\bin\$(Configuration)\**\*.*">
+      <Output TaskParameter="Include" ItemName="WebJobFiles"/>
+    </CreateItem>
+    <Copy SourceFiles="@(WebJobFiles)" DestinationFolder="$(ProjectDir)App_Data\webjobs\continuous\WindowsAzureBackgroundWork.Demo.WebJob" />
   </Target>
-  -->
 </Project>

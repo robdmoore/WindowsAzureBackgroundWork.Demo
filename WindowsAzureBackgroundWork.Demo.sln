@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAzureBackgroundWork.Demo", "WindowsAzureBackgroundWork.Demo\WindowsAzureBackgroundWork.Demo.csproj", "{802DA93D-BFF1-415A-BA24-10559E9FFB63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAzureBackgroundWork.Demo.Web", "WindowsAzureBackgroundWork.Demo.Web\WindowsAzureBackgroundWork.Demo.Web.csproj", "{F2FD7C57-3261-4A3D-966E-18E5A8E5AC99}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9AC8FA8-786E-405F-B124-442D9B042206} = {B9AC8FA8-786E-405F-B124-442D9B042206}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAzureBackgroundWork.Demo.WebJob", "WindowsAzureBackgroundWork.Demo.WebJob\WindowsAzureBackgroundWork.Demo.WebJob.csproj", "{B9AC8FA8-786E-405F-B124-442D9B042206}"
 EndProject
