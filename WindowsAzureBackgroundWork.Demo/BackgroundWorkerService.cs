@@ -22,7 +22,7 @@ namespace WindowsAzureBackgroundWork.Demo
             var work = new WorkCompleted(requestOriginator);
             await _table.ExecuteAsync(TableOperation.Insert(work));
 
-            while (work.Increment <= 150)
+            while (work.Increment < 500)
             {
                 await Task.Delay(TimeSpan.FromSeconds(5));
                 work.ReportWork();
