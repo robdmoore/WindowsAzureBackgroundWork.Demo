@@ -95,6 +95,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WindowsAzureBackgroundWork.Demo.WebJob\WindowsAzureBackgroundWork.Demo.WebJob.csproj">
+      <Project>{b9ac8fa8-786e-405f-b124-442d9b042206}</Project>
+      <Name>WindowsAzureBackgroundWork.Demo.WebJob</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WindowsAzureBackgroundWork.Demo\WindowsAzureBackgroundWork.Demo.csproj">
       <Project>{802da93d-bff1-415a-ba24-10559e9ffb63}</Project>
       <Name>WindowsAzureBackgroundWork.Demo</Name>
@@ -127,8 +131,8 @@
   </ProjectExtensions>
   <Target Name="AfterBuild">
     <CreateItem Include="$(ProjectDir)..\WindowsAzureBackgroundWork.Demo.WebJob\bin\$(Configuration)\**\*.*">
-      <Output TaskParameter="Include" ItemName="WebJobFiles"/>
+      <Output TaskParameter="Include" ItemName="WebJobFiles" />
     </CreateItem>
-    <Copy SourceFiles="@(WebJobFiles)" DestinationFolder="$(ProjectDir)App_Data\webjobs\continuous\WindowsAzureBackgroundWork.Demo.WebJob" />
+    <Copy SourceFiles="@(WebJobFiles)" DestinationFolder="$(ProjectDir)App_Data\jobs\continuous\WindowsAzureBackgroundWork.Demo.WebJob" />
   </Target>
 </Project>
